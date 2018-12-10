@@ -1,0 +1,31 @@
+package alaTestProgram;
+
+public class calculatePrice {
+
+	public static void main(String args[])
+	{
+		
+	}
+	
+	String prefix;
+	String phoneNumber;
+	Double price;
+	public String getPrefix() {
+		return prefix;
+	}
+	public void setPrefix(String prefix) {
+		this.prefix = prefix;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+}

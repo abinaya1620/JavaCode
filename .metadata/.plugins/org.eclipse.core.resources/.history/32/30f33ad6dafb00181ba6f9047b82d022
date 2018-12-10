@@ -1,0 +1,77 @@
+package alaTestProgram;
+
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class sample2 {
+
+    public static void main(String[] args) {
+String s="4673290190";
+        Map<String, Double> operatorA = new HashMap<String, Double>();
+        operatorA.put("1", 0.9);
+        operatorA.put("268", 5.1);
+        operatorA.put("46", 0.17);
+        operatorA.put("4620", 0.0);
+        operatorA.put("468", 0.15);
+        operatorA.put("4631", 0.15);
+        operatorA.put("4673", 0.9);
+        operatorA.put("46732", 1.1);
+  
+        Map<String,Double> operatorB= new HashMap<String,Double>(); 
+        operatorB.put("1",0.92);
+        operatorB.put("44", 0.5);
+        operatorB.put("46", 0.2);
+        operatorB.put("467", 1.0);
+        operatorB.put("48", 1.2);
+        
+       
+        System.out.println("\nMatching longest Key for Operator A"+ GetLongestMachtingkey(operatorA,s));
+        System.out.println("\nMatching longest Key for Operator B"+ GetLongestMachtingkey(operatorB,s));
+       
+    }
+
+    public static <K, V> void printMap(Map<K, V> map) {
+        for (Map.Entry<K, V> entry : map.entrySet()) {
+            System.out.println("Key : " + entry.getKey() 
+				+ " Value : " + entry.getValue());
+        }
+    }
+private static String GetLongestMachtingkey(Map<String,Double> operator, String s)
+{
+	Iterator i= GetSortedMap(operator).keySet().iterator();
+    String matchedKey = null;
+    String key="";
+    while (i.hasNext()) {
+        key = (String) i.next();
+        if (s.contains(key) && (matchedKey == null || matchedKey.length() < key.length())) {
+            matchedKey = key;
+        }
+    }
+    if (matchedKey != null) {
+    	System.out.println(matchedKey);
+    	System.out.print(operator.get(matchedKey));
+    	return matchedKey;
+    }
+    return matchedKey;
+}
+    private static Map<String,Double> GetSortedMap(Map<String,Double> operator)
+    {
+    	 Map<String , Double> treeMap = new TreeMap<String, Double>(
+                 new Comparator<String>() {
+
+                     @Override
+                     public int compare(String o1, String o2) {
+                         return o2.compareTo(o1);
+                     }
+
+                 });
+         treeMap.putAll(operator);
+
+        return treeMap;
+
+    }
+    
+}

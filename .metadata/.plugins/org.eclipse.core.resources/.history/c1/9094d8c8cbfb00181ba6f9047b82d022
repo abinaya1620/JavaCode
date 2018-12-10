@@ -1,0 +1,49 @@
+package alaTestProgram;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+
+public class sample1 {
+	public static void main(String args[]){
+		   String s ="4123567";
+		    Map<String,Double> operatorA = new HashMap<String,Double>();
+		    operatorA.put("1", 0.9);
+            operatorA.put("268", 5.1);
+            operatorA.put("46", 0.17);
+            operatorA.put("4620", 0.0);
+            operatorA.put("468", 0.15);
+            operatorA.put("4631", 0.15);
+            operatorA.put("4673", 0.9);
+            operatorA.put("46732", 1.1);
+
+		
+		    
+		    Map<String,Double> operatorB = new HashMap<String,Double>();
+		    operatorB.put("1",0.92);
+            operatorB.put("44", 0.5);
+            operatorB.put("46", 0.2);
+            operatorB.put("467", 1.0);
+            operatorB.put("48", 1.2);
+
+            String operator1= GetLongestKey(operatorA,s);
+         //   String operator2= GetLongestKey(operatorB,s);
+		   
+	}
+	
+	private static String GetLongestKey(Map<String,Double> operator, String s)
+	{
+		// String key="";
+
+		    Iterator<String> i =operator.keySet().iterator();
+		  
+		        String matchedKey = null;
+		        for ( String key : operator.keySet() ) {
+		            System.out.println( key );
+		        }
+		      
+		        return  matchedKey;
+	}
+}
+

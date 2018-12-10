@@ -1,0 +1,65 @@
+package alaTestProgram;
+import java.util.HashMap; 
+import java.util.Scanner;
+public class calculatePrice {
+
+	public static void main(String args[])
+	{
+		Scanner phoneNo = new Scanner(System.in);
+		System.out.println("Enter the phone Number:"+phoneNo.nextInt());
+
+		HashMap<String,Double> operatorA= new HashMap<String,Double>(); 
+         operatorA.put("1", 0.9);
+            operatorA.put("268", 5.1);
+            operatorA.put("46", 0.17);
+            operatorA.put("4620", 0.0);
+            operatorA.put("468", 0.15);
+            operatorA.put("4631", 0.15);
+            operatorA.put("4673", 0.9);
+            operatorA.put("46732", 1.1);
+      
+      		HashMap<String,Double> operatorB= new HashMap<String,Double>(); 
+            operatorB.put("1",0.92);
+            operatorB.put("44", 0.5);
+            operatorB.put("46", 0.2);
+            operatorB.put("467", 1.0);
+            operatorB.put("48", 1.2);
+
+
+        	
+    		System.out.println("Size of operator A is:- " + operatorA.size());
+          System.out.println("Size of operator B is : "+operatorB.size());
+                             
+    	
+    	
+    		if (operatorA.containsKey("46")) 
+    		{ 
+    			Double rate = operatorA.get("46"); 
+    			System.out.println("cost for key \"46\" is: " + rate); 
+    		} 
+    		
+    		
+	}
+	
+	String prefix;
+	String phoneNumber;
+	Double price;
+	public String getPrefix() {
+		return prefix;
+	}
+	public void setPrefix(String prefix) {
+		this.prefix = prefix;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
+}

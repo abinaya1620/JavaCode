@@ -1,0 +1,48 @@
+package com.alaTestProgram;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class CalculateCheapCallTest {
+
+	@Before
+	public void setUp() throws Exception {
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void testCalculateCheapcall() {
+		CalculateCheapCall call=new CalculateCheapCall();
+     call.calculateCheapcall("5555555555");
+   
+	
+	}
+	@Test
+	public void testCalculateCheapcall2() {
+		CalculateCheapCall call=new CalculateCheapCall();
+     call.calculateCheapcall("467324444");
+   
+	
+	}
+	@Test
+	public void testCalculateCheapcall3() {
+		CalculateCheapCall call=new CalculateCheapCall();
+     call.calculateCheapcall("485555555");
+   
+	
+	}
+	@Test
+	public void testCalculateCheapcall4() {
+		CalculateCheapCall call=new CalculateCheapCall();
+     call.calculateCheapcall("2681111");
+   
+	
+	}
+
+}

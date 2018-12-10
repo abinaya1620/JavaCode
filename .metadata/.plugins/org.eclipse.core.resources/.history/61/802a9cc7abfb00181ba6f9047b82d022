@@ -1,0 +1,45 @@
+package alaTestProgram;
+import java.util.HashMap;
+import java.util.Map;
+ 
+/**
+ *
+ * @author Abdul Mannaf
+ * Monday, 19 February 2018
+ * Ubuntu 16.10
+ */
+public class sample{
+ 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+ 
+	// Create a hash map
+	HashMap<Integer, String> hm = new HashMap<Integer, String>();
+ 
+	// Put elements to the map
+	hm.put(12, "Google");
+	hm.put(123, "Bing");
+	hm.put(12345, "Yandex");
+	hm.put(1, "DuckDuckGo");
+	hm.put(1233, "Baidu");
+	hm.put(129874, "Yahoo");
+	
+	// Get first key and value
+	Map.Entry<Integer, String> firstEntry = hm.entrySet().iterator().next();
+	int largestKey = firstEntry.getKey();
+	String largestKeyValue = firstEntry.getValue();
+ 
+	for (Map.Entry<Integer, String> map : hm.entrySet()) {
+	    int key = map.getKey();
+	    if (key > largestKey) {
+		largestKey = key;
+		largestKeyValue = map.getValue();
+	    }
+	}
+	System.out.println("Largest Key       : " + largestKey);
+	System.out.println("Largest Key Value : " + largestKeyValue);
+    }
+}
+

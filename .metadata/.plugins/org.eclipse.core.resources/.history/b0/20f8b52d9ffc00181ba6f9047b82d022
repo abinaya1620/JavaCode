@@ -1,0 +1,33 @@
+package com.alaTestProgram;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class CalculateCheapCallTest {
+
+	@Before
+	public void setUp() throws Exception {
+		
+	}
+
+	@After
+	public void tearDown() throws Exception {
+	}
+
+
+	@Test
+	public void testCalculateCheapcall() {
+		String number="";
+		
+		CalculateCheapCall call=new CalculateCheapCall();
+     actual= call.calculateCheapcall(number);
+     assertEquals(1.2, actual);
+           //assertEquals(1.2, actual);
+	
+	}
+
+
+}

@@ -1,0 +1,39 @@
+package alaTestProgram;
+
+import java.util.Comparator;
+import java.util.SortedMap;
+import java.util.TreeMap;
+
+public class sample
+{
+    public static void main(String[] args) {
+        // Creating a TreeMap with a Custom comparator (Descending order)
+        SortedMap<String, Double> fileExtensions = new TreeMap<String, Double>(new Comparator<String>() {
+        
+            public int compare(String s1, String s2) {
+                return s2.compareTo(s1);
+            }
+        });
+
+        /*
+            The above TreeMap with custom Comparator can be simply written as -
+            SortedMap<String, String> fileExtensions = new TreeMap<>(Comparator.reverseOrder());
+        */
+
+        // Adding new key-value pairs to a TreeMap
+        fileExtensions.put("268", 5.1);
+        
+        
+        fileExtensions.put("46", 0.17);
+        fileExtensions.put("4620", 0.0);
+        fileExtensions.put("468", 0.15);
+        fileExtensions.put("4631", 0.15);
+        fileExtensions.put("4673", 0.9);
+        fileExtensions.put("46732", 1.1);
+  
+       
+        // Printing the TreeMap (The keys will be sorted based on the supplied comparator)
+        System.out.println(fileExtensions);
+
+    }
+}

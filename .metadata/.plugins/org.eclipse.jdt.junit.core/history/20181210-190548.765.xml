@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="CalculateCheapCallTest" project="alaTestProgram" tests="4" started="4" failures="0" errors="0" ignored="0">
+  <testsuite name="com.alaTestProgram.CalculateCheapCallTest" time="0.0">
+    <testcase name="testCalculateCheapcall2" classname="com.alaTestProgram.CalculateCheapCallTest" time="0.0"/>
+    <testcase name="testCalculateCheapcall3" classname="com.alaTestProgram.CalculateCheapCallTest" time="0.0"/>
+    <testcase name="testCalculateCheapcall4" classname="com.alaTestProgram.CalculateCheapCallTest" time="0.0"/>
+    <testcase name="testCalculateCheapcall" classname="com.alaTestProgram.CalculateCheapCallTest" time="0.0"/>
+  </testsuite>
+</testrun>

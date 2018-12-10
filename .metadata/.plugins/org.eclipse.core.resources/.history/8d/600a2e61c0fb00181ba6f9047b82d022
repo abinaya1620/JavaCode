@@ -1,0 +1,37 @@
+package alaTestProgram;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+
+public class sample1 {
+	public static void main(String args[]){
+		   String s ="VamshiKrishnaA";
+		    Map<String,String> h = new HashMap<String,String>();
+		    h.put("Vamshi", "89");
+		    h.put("VamshiKrishnaA","dataDir");
+		    h.put("VamshiKrishna","dataDira");
+
+		    h.put("VamshiK", "krihsn");
+
+		    String key="";
+
+		    Iterator<String> i =h.keySet().iterator();
+		  
+		        String matchedKey = null;
+
+		        while (i.hasNext()) {
+		            key = i.next();
+		            if (s.contains(key) && (matchedKey == null || matchedKey.length() < key.length())) {
+		                matchedKey = key;
+		            }
+		        }
+		        if (matchedKey != null) {
+		            s = s.replace(matchedKey, h.get(matchedKey));
+		        }
+		    
+		    System.out.println(s);
+	}
+}
+

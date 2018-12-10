@@ -1,0 +1,43 @@
+package alaTestProgram;
+
+import java.util.Comparator;
+import java.util.TreeMap;
+
+
+public class sample2{
+	
+	 static class DescOrder implements Comparator<String> {
+
+		    @Override
+		    public int compare(String o1, String o2) {	    
+		        return o2.compareTo(o1);
+		    }
+		    }
+
+		    public static void main(String[] args) {
+		        System.out.println("TreeMap Desc Order Example"); 
+		        System.out.println();
+
+		    TreeMap<String, String> map1 = new TreeMap<String, String>(new DescOrder());
+		    map1.put("A1", "A1");
+		    map1.put("A4", "A4");
+		    map1.put("A2", "A2");
+		    map1.put("A10", "A10");
+		    map1.put("A30", "A30");
+
+		    System.out.println(map1);
+		    }
+		
+
+}
+
+class DescOrder implements Comparator<String> {
+
+ 
+    public int compare(String o1, String o2) {
+        if (o1.length() > o2.length())
+        return -1;
+        return o2.compareTo(o1);
+    }
+    
+}

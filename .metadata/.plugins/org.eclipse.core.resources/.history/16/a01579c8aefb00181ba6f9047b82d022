@@ -1,0 +1,29 @@
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class sample {
+
+    public static void main(String[] args) {
+
+        HashMap<String,Integer> map = new HashMap<String,Integer>();
+        map.put("java",4);
+        map.put("go",2);
+        map.put("objective-c",11);
+        map.put("c#",2);
+
+
+        Map<String,Integer> treeMap = new TreeMap<String, Integer>(
+                new Comparator<String>() {
+                    public int compare(String s1, String s2) {
+                        return Integer.compare(s1.length(), s2.length());
+                    }
+                }
+        );
+
+        treeMap.putAll(map);
+
+        System.out.println(treeMap);
+    }
+}

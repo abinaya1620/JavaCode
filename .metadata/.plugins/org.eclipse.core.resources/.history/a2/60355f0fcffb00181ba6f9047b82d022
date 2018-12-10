@@ -1,0 +1,14 @@
+package alaTestProgram;
+
+import java.util.HashMap;
+
+public class sample2 {
+
+	public static void main(String args[]){
+		HashMap<String,Integer> map = new HashMap<String,Integer>();
+		  map.put("432",4);
+	        map.put("43",2);
+	        map.put("4344",11);
+	        map.put("4",2);
+	        }
+}

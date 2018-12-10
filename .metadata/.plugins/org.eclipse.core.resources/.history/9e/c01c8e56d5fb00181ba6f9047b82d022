@@ -1,0 +1,54 @@
+package alaTestProgram;
+
+import java.util.Comparator;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class sample2 {
+
+    public static void main(String[] args) {
+
+        Map<String, Double> operatorA = new HashMap<String, Double>();
+        operatorA.put("1", 0.9);
+        operatorA.put("268", 5.1);
+        operatorA.put("46", 0.17);
+        operatorA.put("4620", 0.0);
+        operatorA.put("468", 0.15);
+        operatorA.put("4631", 0.15);
+        operatorA.put("4673", 0.9);
+        operatorA.put("46732", 1.1);
+  
+        System.out.println("Unsort Map......");
+        printMap(operatorA);
+
+        System.out.println("\nSorted Map......By Key");
+        Map<Integer, String> treeMap = new TreeMap<Integer, String>(
+                new Comparator<Integer>() {
+
+                    @Override
+                    public int compare(Integer o1, Integer o2) {
+                        return o2.compareTo(o1);
+                    }
+
+                });
+
+	    /* For Java 8, try this lambda
+		Map<Integer, String> treeMap = new TreeMap<>(
+		                (Comparator<Integer>) (o1, o2) -> o2.compareTo(o1)
+		        );
+		*/
+        treeMap.putAll(unsortMap);
+
+        printMap(treeMap);
+
+    }
+
+    public static <K, V> void printMap(Map<K, V> map) {
+        for (Map.Entry<K, V> entry : map.entrySet()) {
+            System.out.println("Key : " + entry.getKey() 
+				+ " Value : " + entry.getValue());
+        }
+    }
+
+}
